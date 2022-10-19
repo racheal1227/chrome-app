@@ -1,13 +1,17 @@
+const welcome = document.querySelector('.welcome');
 const login = document.querySelector('.login');
 const loginForm = document.querySelector('.login__form');
 const loginInput = document.querySelector('.login__form input');
-const hello = document.querySelector('.hello span:nth-child(1)');
+const hello = document.querySelector('.hello');
+const helloUser = document.querySelector('.hello__user');
+const helloEdit = document.querySelector('.hello__edit');
 const clock = document.querySelector('.clock span:nth-child(1)');
 
 /* localStorage에 유저가 저장되어 있는지 체크 */
 const CheckUser = () => {
   if (!localStorage.getItem('username')) {
     login.classList.remove('d-none');
+    welcome.classList.add('d-none');
   } else {
     greeting();
   }
@@ -15,7 +19,7 @@ const CheckUser = () => {
 
 /* 시간에 따라 사용자에게 인사 */
 const greeting = () => {
-  const timesOfDay = ['morning', 'afternoon', 'evening', 'night'];
+  const timesOfDay = ['좋은 아침이에요', '좋은 하루 되세요', '좋은 저녁입니다', '좋은 꿈 꾸세요'];
   const now = new Date();
   const nowHour = now.getHours();
 
@@ -30,7 +34,7 @@ const greeting = () => {
     timeIndex = 3;
   }
 
-  hello.innerText = `Good ${timesOfDay[timeIndex]}, ${localStorage.getItem('username')}!`;
+  helloUser.innerText = `${localStorage.getItem('username')}님, ${timesOfDay[timeIndex]}`;
 };
 
 /* localStorage에 username 저장 */
@@ -39,6 +43,7 @@ const handleLoginSubmit = event => {
   const username = loginInput.value;
   localStorage.setItem('username', username);
   login.classList.add('d-none');
+  welcome.classList.remove('d-none');
   greeting();
 };
 
@@ -51,8 +56,24 @@ const handleClock = () => {
   clock.innerText = `${hour}:${minute}:${second}`;
 };
 
+/* 이름 수정 */
+const handleEdit = event => {
+  event.preventDefault();
+  loginInput.value = localStorage.getItem('username');
+  localStorage.removeItem('username');
+  welcome.classList.add('d-none');
+  login.classList.remove('d-none');
+};
+
 /* Add Event Listener */
 loginForm.addEventListener('submit', handleLoginSubmit);
+helloEdit.addEventListener('click', handleEdit);
+hello.addEventListener('mouseover', () => {
+  helloEdit.classList.remove('v-hidden');
+});
+hello.addEventListener('mouseleave', () => {
+  helloEdit.classList.add('v-hidden');
+});
 
 /* Running */
 CheckUser();

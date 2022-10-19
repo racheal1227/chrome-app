@@ -1089,5 +1089,5 @@ const getQuote = () => {
 
 /* Running */
 const todayQuote = getQuote();
-quote.innerText = todayQuote.quote;
+quote.innerText = `"${todayQuote.quote}"`;
 author.innerText = todayQuote.author;
