@@ -39,6 +39,7 @@ const handleLoginSubmit = event => {
   const username = loginInput.value;
   localStorage.setItem('username', username);
   login.classList.add('d-none');
+  greeting();
 };
 
 /* 현재 시간 */
