@@ -5,27 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TODO</title>
-    <link rel="stylesheet" href="./style/reset.css" />
-    <link rel="stylesheet" href="./style/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="login d-none">
-      <form class="login__form">
-        <input type="text" required autofocus />
-      </form>
-    </div>
-    <div class="clock">
-      <span></span>
-    </div>
-    <div class="hello">
-      <span></span>
-    </div>
-    <div class="quotes">
-      <span></span>
-      <span></span>
+    <div class="container">
+      <div class="login d-none">
+        <span>이름을 알려주세요</span>
+        <form class="login__form">
+          <input type="text" required autofocus maxlength="15" spellcheck="false" />
+        </form>
+      </div>
+      <div class="welcome">
+        <div class="clock">
+          <span></span>
+        </div>
+        <div class="hello">
+          <span class="hello__user"></span>
+          <span class="hello__edit v-hidden" title="이름 수정"
+            ><i class="fa-solid fa-pen-to-square fa-lg"></i
+          ></span>
+        </div>
+        <div class="todo__icon">
+          <span>오늘의 할 일</span>
+        </div>
+        <div class="todo">
+          <span class="todo__title">할 일</span>
+          <div class="todo__empty">
+            <span>오늘의 할 일을 추가해 주세요!</span>
+            <button>할 일 추가</button>
+          </div>
+          <form>
+            <input type="text" />
+          </form>
+        </div>
+        <div class="quotes">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
     </div>
     <script src="./src/greeting.js"></script>
     <script src="./src/quotes.js"></script>
     <script src="./src/background.js"></script>
+    <script src="./src/todo.js"></script>
   </body>
 </html>
