@@ -38,11 +38,12 @@
         <div class="todo">
           <span class="todo__title">할 일</span>
           <div class="todo__empty">
-            <span>오늘의 할 일을 추가해 주세요!</span>
-            <button>할 일 추가</button>
+            <span class="empty__text">오늘의 할 일을 추가해 주세요!</span>
+            <button class="empty__btn">할 일 추가</button>
           </div>
-          <form>
-            <input type="text" />
+          <ul class="todo__list"></ul>
+          <form class="todo__form">
+            <input type="text" placeholder="새로운 할 일" required class="v-hidden" />
           </form>
         </div>
         <div class="quotes">

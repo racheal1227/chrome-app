@@ -27,3 +27,6 @@ body {
 .v-hidden {
   visibility: hidden !important;
 }
+.t-line {
+  text-decoration: line-through;
+}

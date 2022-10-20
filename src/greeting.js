@@ -38,8 +38,7 @@ const greeting = () => {
 };
 
 /* localStorage에 username 저장 */
-const handleLoginSubmit = event => {
-  event.preventDefault();
+const handleLoginSubmit = () => {
   const username = loginInput.value;
   localStorage.setItem('username', username);
   login.classList.add('d-none');
@@ -63,6 +62,7 @@ const handleEdit = event => {
   localStorage.removeItem('username');
   welcome.classList.add('d-none');
   login.classList.remove('d-none');
+  loginInput.focus();
 };
 
 /* Add Event Listener */
