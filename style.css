@@ -4,10 +4,11 @@
 
 @font-face {
   font-family: naverNanumSquareNeo;
-  src: url(../font/NanumSquareNeoOTF-bRg.otf);
+  src: url(font/nanumSquareNeoOTF-bRg.otf);
 }
 * {
   box-sizing: border-box;
+  font-family: 'naverNanumSquareNeo', 'Courier New', Courier, monospace;
 }
 body {
   font-family: 'naverNanumSquareNeo', 'Courier New', Courier, monospace;
