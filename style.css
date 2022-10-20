@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: naverNanumSquareNeo;
-  src: url(font/nanumSquareNeoOTF-bRg.otf);
+  src: url('font/nanumSquareNeoOTF-bRg.otf');
 }
 * {
   box-sizing: border-box;
@@ -16,7 +16,6 @@ body {
   height: 100vh;
   max-width: 100%;
   max-height: 100%;
-  background-image: url('../image/0.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
