@@ -1,0 +1,81 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* login */
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 100px;
+}
+.login span {
+  font-size: 70px;
+  font-weight: 900;
+}
+.login__form input {
+  width: 400px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid white;
+  font-size: 28px;
+  font-weight: 900;
+  text-align: center;
+  color: white;
+}
+
+/* welcome */
+.clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 120px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+.hello {
+  width: 100%;
+  height: 60px;
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hello__user {
+  font-size: 40px;
+  font-weight: 900;
+  margin-right: 20px;
+}
+.hello__edit {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #cec2c2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quotes {
+  position: fixed;
+  bottom: 0;
+  width: 80%;
+  left: 10%;
+  right: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 25px;
+}
