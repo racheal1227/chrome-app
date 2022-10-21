@@ -6,6 +6,10 @@
   font-family: naverNanumSquareNeo;
   src: url('font/NanumSquareNeo-bRg.ttf');
 }
+@font-face {
+  font-family: nanumAmSeuTeReuDam;
+  src: url('font/NanumAmSeuTeReuDam.ttf');
+}
 * {
   box-sizing: border-box;
   font-family: 'naverNanumSquareNeo', 'Courier New', Courier, monospace;

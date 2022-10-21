@@ -19,9 +19,14 @@
 }
 
 .todo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   z-index: 3;
   width: 300px;
   min-height: 300px;
+  max-height: 90%;
+  overflow: scroll;
   position: fixed;
   right: 0;
   bottom: 10%;
@@ -30,6 +35,8 @@
   border-radius: 12px;
 }
 .todo__title {
+  width: 100%;
+  min-height: 50px;
   height: 50px;
   display: flex;
   align-items: center;
@@ -37,8 +44,13 @@
   font-weight: 900;
   font-size: 18px;
   border-bottom: 1px solid #858585;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: #ffffff;
 }
 .todo__empty {
+  width: 100%;
   height: 200px;
   display: flex;
   flex-direction: column;
@@ -60,6 +72,33 @@
 .empty__btn:hover {
   background-color: #858585;
   color: #ffffff;
+}
+.todo__exist {
+  width: 100%;
+  min-height: 200px;
+}
+.todo__list {
+  width: 100%;
+  padding: 20px;
+  line-height: 25px;
+}
+.todo__list li {
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+}
+.todo__list li span {
+  font-family: 'nanumAmSeuTeReuDam';
+  font-size: 22px;
+  margin: 0 10px;
+}
+.todo__list i {
+  margin-left: auto;
+}
+.todo__form {
+  width: 100%;
+  position: sticky;
+  bottom: 0;
 }
 .todo__form input {
   width: 100%;
