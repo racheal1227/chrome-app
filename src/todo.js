@@ -5,6 +5,7 @@ const emptyBtn = document.querySelector('.empty__btn');
 const todoForm = document.querySelector('.todo__form');
 const todoInput = document.querySelector('.todo__form input');
 const todoList = document.querySelector('.todo__list');
+const todoExist = document.querySelector('.todo__exist');
 
 // TODO
 const handlePop = () => {
@@ -35,6 +36,7 @@ const handleSubmit = event => {
 
   paint(todo);
   if (!todoEmpty.classList.contains('d-none')) todoEmpty.classList.add('d-none');
+  if (todoExist.classList.contains('d-none')) todoExist.classList.remove('d-none');
 };
 
 const paint = todo => {
@@ -52,7 +54,7 @@ const paint = todo => {
   checkbox.addEventListener('click', handleCheckboxClick);
   if (todo.checked) li.classList.add('t-line');
   span.innerText = todo.text;
-  icon.classList.add('fa-solid', 'fa-trash', 'todo__delete');
+  icon.classList.add('fa-solid', 'fa-trash');
   icon.addEventListener('click', handleDeleteClick);
   todoList.appendChild(li);
 };
@@ -84,6 +86,7 @@ const handleDeleteClick = event => {
   if (newTodo === null || newTodo.length === 0) {
     todoEmpty.classList.remove('d-none');
     todoInput.classList.add('v-hidden');
+    todoExist.classList.add('d-none');
   }
 };
 
@@ -98,6 +101,7 @@ const firstPaint = () => {
   } else {
     todoEmpty.classList.remove('d-none');
     todoInput.classList.add('v-hidden');
+    todoExist.classList.add('d-none');
   }
 };
 
