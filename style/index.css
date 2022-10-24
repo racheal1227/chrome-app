@@ -79,3 +79,22 @@
   font-weight: 600;
   line-height: 25px;
 }
+
+.weather {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  line-height: 20px;
+  font-size: 18px;
+  font-weight: 900s;
+  background-color: white;
+  color: black;
+  opacity: 0.5;
+  width: 130px;
+  height: 60px;
+  border-radius: 10px;
+}
